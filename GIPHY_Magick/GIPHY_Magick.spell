@@ -1,0 +1,1207 @@
+{
+    "id": "d8367435-805f-4266-9ffe-e5936cd3a13f",
+    "name": "GIPHY_v0.1",
+    "projectId": "clkxhsrfq0003l5080i5jonwb",
+    "hash": "2ac26d0678c853aed59d3ad9e0b16898",
+    "createdAt": "1691370803204",
+    "updatedAt": "1691371779438",
+    "creatorId": null,
+    "graph": {
+        "id": "demo@0.1.0",
+        "nodes": {
+            "232": {
+                "id": 232,
+                "data": {
+                    "name": "Input - Default",
+                    "text": {
+                        "id": "2eb64348-adee-4118-bcca-19697ca3a16a",
+                        "inputs": {},
+                        "secrets": {},
+                        "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+                        "spellName": "Starter",
+                        "publicVariables": "[]"
+                    },
+                    "isInput": true,
+                    "outputs": [],
+                    "success": false,
+                    "inputName": "Default",
+                    "inputType": "Default",
+                    "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+                    "useDefault": false,
+                    "dataControls": {
+                        "inputType": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "defaultValue": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Hello world",
+                    "playtestToggle": {
+                        "outputs": [],
+                        "receivePlaytest": false
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 234,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 234,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -128,
+                    176
+                ],
+                "name": "Input"
+            },
+            "233": {
+                "id": 233,
+                "data": {
+                    "name": "Output",
+                    "success": false,
+                    "isOutput": true,
+                    "socketKey": "0f17a35e-1380-428b-bc87-4a38d207fefc",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        }
+                    },
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 255,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 256,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    3344,
+                    320
+                ],
+                "name": "Output"
+            },
+            "234": {
+                "id": 234,
+                "data": {
+                    "success": false,
+                    "socketKey": "01315448-6af0-4574-bc1f-79de21f6dfda"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 232,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 235,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "agentId": {
+                        "connections": []
+                    },
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 235,
+                                "input": "message",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": []
+                    },
+                    "channel": {
+                        "connections": []
+                    },
+                    "channelType": {
+                        "connections": []
+                    },
+                    "connector": {
+                        "connections": []
+                    },
+                    "entities": {
+                        "connections": []
+                    },
+                    "projectId": {
+                        "connections": []
+                    },
+                    "observer": {
+                        "connections": []
+                    },
+                    "sender": {
+                        "connections": []
+                    },
+                    "embedding": {
+                        "connections": []
+                    },
+                    "rawData": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    134.77015272396946,
+                    173.31442888504043
+                ],
+                "name": "Event Destructure"
+            },
+            "235": {
+                "id": 235,
+                "data": {
+                    "inputs": [
+                        {
+                            "name": "message",
+                            "taskType": "output",
+                            "socketKey": "message",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "fewshot": "pretend youre a close friend of the person sending this message. think of a funny, sassy, witty response to this message: \"{{message}}\"\n\nensure that your responses are no more than 3 words and reference culturally relevant comebacks/remarks from pop culture and meme culture and DO NOT USE ANY PUNCTUATION. i cannot stress this enough.",
+                    "success": false
+                },
+                "inputs": {
+                    "message": {
+                        "connections": [
+                            {
+                                "node": 234,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 234,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 236,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "prompt": {
+                        "connections": [
+                            {
+                                "node": 236,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    400,
+                    176
+                ],
+                "name": "Text Template"
+            },
+            "236": {
+                "id": 236,
+                "data": {
+                    "error": false,
+                    "model": "gpt-3.5-turbo",
+                    "top_k": 50,
+                    "top_p": 1,
+                    "success": false,
+                    "temperature": 0.5,
+                    "stopSequences": "",
+                    "presence_penalty": 0,
+                    "frequency_penalty": 0
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 235,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "system": {
+                        "connections": []
+                    },
+                    "conversation": {
+                        "connections": []
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 235,
+                                "output": "prompt",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "function": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 247,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "result": {
+                        "connections": [
+                            {
+                                "node": 247,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "error": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    656,
+                    176
+                ],
+                "name": "Generate Text"
+            },
+            "243": {
+                "id": 243,
+                "data": {
+                    "inputs": [
+                        {
+                            "name": "limit",
+                            "taskType": "output",
+                            "socketKey": "limit",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "rating",
+                            "taskType": "output",
+                            "socketKey": "rating",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "api_key",
+                            "taskType": "output",
+                            "socketKey": "api_key",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "search",
+                            "taskType": "output",
+                            "socketKey": "search",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "fewshot": "https://api.giphy.com/v1/gifs/search?api_key={{api_key}}&q={{search}}&limit={{limit}}&offset=0&rating={{rating}}&lang=en&bundle=messaging_non_clips",
+                    "success": false
+                },
+                "inputs": {
+                    "limit": {
+                        "connections": [
+                            {
+                                "node": 246,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "rating": {
+                        "connections": [
+                            {
+                                "node": 245,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "api_key": {
+                        "connections": [
+                            {
+                                "node": 244,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "search": {
+                        "connections": [
+                            {
+                                "node": 247,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 247,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 258,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "prompt": {
+                        "connections": [
+                            {
+                                "node": 258,
+                                "input": "url",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1296,
+                    336
+                ],
+                "name": "Text Template"
+            },
+            "244": {
+                "id": 244,
+                "data": {
+                    "_var": "",
+                    "name": "api_key",
+                    "success": false,
+                    "isPublic": true,
+                    "socketKey": null
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 243,
+                                "input": "api_key",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    656,
+                    384
+                ],
+                "name": "String Variable"
+            },
+            "245": {
+                "id": 245,
+                "data": {
+                    "_var": "pg-13",
+                    "name": "rating",
+                    "success": false,
+                    "isPublic": true,
+                    "socketKey": null
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 243,
+                                "input": "rating",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    656,
+                    480
+                ],
+                "name": "String Variable"
+            },
+            "246": {
+                "id": 246,
+                "data": {
+                    "_var": "1",
+                    "name": "limit",
+                    "success": false,
+                    "isPublic": true,
+                    "socketKey": null
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 243,
+                                "input": "limit",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    656,
+                    576
+                ],
+                "name": "String Variable"
+            },
+            "247": {
+                "id": 247,
+                "data": {
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 236,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 236,
+                                "output": "result",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "match": {
+                        "connections": [
+                            {
+                                "node": 248,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "replace": {
+                        "connections": [
+                            {
+                                "node": 249,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 243,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 243,
+                                "input": "search",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    976,
+                    80
+                ],
+                "name": "Replace Text"
+            },
+            "248": {
+                "id": 248,
+                "data": {
+                    "_var": " ",
+                    "name": "Space",
+                    "success": false,
+                    "isPublic": false,
+                    "socketKey": null
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 247,
+                                "input": "match",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    656,
+                    -16
+                ],
+                "name": "String Variable"
+            },
+            "249": {
+                "id": 249,
+                "data": {
+                    "_var": "+",
+                    "name": "+",
+                    "success": false,
+                    "isPublic": false,
+                    "socketKey": null
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 247,
+                                "input": "replace",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    656,
+                    80
+                ],
+                "name": "String Variable"
+            },
+            "251": {
+                "id": 251,
+                "data": {
+                    "outputs": [
+                        {
+                            "name": "data",
+                            "taskType": "output",
+                            "socketKey": "data",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 258,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "object": {
+                        "connections": [
+                            {
+                                "node": 258,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "data": {
+                        "connections": [
+                            {
+                                "node": 252,
+                                "input": "array",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 252,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1808,
+                    320
+                ],
+                "name": "Get Values From Object"
+            },
+            "252": {
+                "id": 252,
+                "data": {
+                    "element": 0,
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 251,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "array": {
+                        "connections": [
+                            {
+                                "node": 251,
+                                "output": "data",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 253,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 253,
+                                "input": "object",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    2064,
+                    320
+                ],
+                "name": "Get Value From Array"
+            },
+            "253": {
+                "id": 253,
+                "data": {
+                    "outputs": [
+                        {
+                            "name": "images",
+                            "taskType": "output",
+                            "socketKey": "images",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "socketKey": null
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 252,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "object": {
+                        "connections": [
+                            {
+                                "node": 252,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "images": {
+                        "connections": [
+                            {
+                                "node": 254,
+                                "input": "object",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 254,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    2320,
+                    320
+                ],
+                "name": "Get Values From Object"
+            },
+            "254": {
+                "id": 254,
+                "data": {
+                    "outputs": [
+                        {
+                            "name": "original",
+                            "taskType": "output",
+                            "socketKey": "original",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "socketKey": null
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 253,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "object": {
+                        "connections": [
+                            {
+                                "node": 253,
+                                "output": "images",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "original": {
+                        "connections": [
+                            {
+                                "node": 257,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 255,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    2576,
+                    320
+                ],
+                "name": "Get Values From Object"
+            },
+            "255": {
+                "id": 255,
+                "data": {
+                    "error": false,
+                    "outputs": [
+                        {
+                            "name": "url",
+                            "taskType": "output",
+                            "socketKey": "url",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "socketKey": null
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 254,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "object": {
+                        "connections": [
+                            {
+                                "node": 257,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "url": {
+                        "connections": [
+                            {
+                                "node": 256,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    3088,
+                    320
+                ],
+                "name": "Get Values From Object"
+            },
+            "256": {
+                "id": 256,
+                "data": {
+                    "name": "String",
+                    "success": false,
+                    "socketType": "String"
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 255,
+                                "output": "url",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    3232,
+                    480
+                ],
+                "name": "Cast"
+            },
+            "257": {
+                "id": 257,
+                "data": {
+                    "name": "Object",
+                    "success": false,
+                    "socketType": "Object"
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 254,
+                                "output": "original",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 255,
+                                "input": "object",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    2832,
+                    320
+                ],
+                "name": "Cast"
+            },
+            "258": {
+                "id": 258,
+                "data": {
+                    "error": false,
+                    "method": "GET"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 243,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "headers": {
+                        "connections": []
+                    },
+                    "url": {
+                        "connections": [
+                            {
+                                "node": 243,
+                                "output": "prompt",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "params": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 251,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 251,
+                                "input": "object",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1552,
+                    336
+                ],
+                "name": "Request"
+            }
+        },
+        "comments": []
+    }
+}
